@@ -1,0 +1,358 @@
+0 verbose cli /usr/local/bin/node /usr/local/bin/npm
+1 info using npm@8.19.4
+2 info using node@v16.20.0
+3 timing npm:load:whichnode Completed in 0ms
+4 timing config:load:defaults Completed in 3ms
+5 timing config:load:file:/usr/local/lib/node_modules/npm/npmrc Completed in 1ms
+6 timing config:load:builtin Completed in 1ms
+7 warn config production Use `--omit=dev` instead.
+8 timing config:load:cli Completed in 4ms
+9 timing config:load:env Completed in 0ms
+10 timing config:load:file:/data/.npmrc Completed in 1ms
+11 timing config:load:project Completed in 14ms
+12 timing config:load:file:/usr/src/node-red/.npmrc Completed in 0ms
+13 timing config:load:user Completed in 0ms
+14 timing config:load:file:/usr/local/etc/npmrc Completed in 3ms
+15 timing config:load:global Completed in 3ms
+16 timing config:load:validate Completed in 0ms
+17 timing config:load:credentials Completed in 1ms
+18 timing config:load:setEnvs Completed in 2ms
+19 timing config:load Completed in 30ms
+20 timing npm:load:configload Completed in 30ms
+21 timing npm:load:mkdirpcache Completed in 9ms
+22 timing npm:load:mkdirplogs Completed in 12ms
+23 verbose title npm install node-red-dashboard@3.5.0
+24 verbose argv "install" "--no-audit" "--no-update-notifier" "--no-fund" "--save" "--save-prefix" "~" "--production" "--engine-strict" "node-red-dashboard@3.5.0"
+25 timing npm:load:setTitle Completed in 2ms
+26 timing config:load:flatten Completed in 4ms
+27 timing npm:load:display Completed in 7ms
+28 verbose logfile logs-max:10 dir:/data/.npm/_logs
+29 verbose logfile /data/.npm/_logs/2023-06-19T08_31_31_917Z-debug-0.log
+30 timing npm:load:logFile Completed in 35ms
+31 timing npm:load:timers Completed in 1ms
+32 timing npm:load:configScope Completed in 0ms
+33 timing npm:load Completed in 97ms
+34 timing arborist:ctor Completed in 1ms
+35 silly logfile done cleaning log files
+36 timing arborist:ctor Completed in 0ms
+37 timing idealTree:init Completed in 29ms
+38 timing idealTree:userRequests Completed in 4ms
+39 silly idealTree buildDeps
+40 silly fetch manifest node-red-dashboard@3.5.0
+41 http fetch GET 200 https://registry.npmjs.org/node-red-dashboard 68ms (cache hit)
+42 silly placeDep ROOT node-red-dashboard@3.5.0 OK for: node-red-project@0.0.1 want: 3.5.0
+43 silly fetch manifest compression@^1.7.4
+44 silly fetch manifest gridstack@^0.6.4
+45 silly fetch manifest serve-static@^1.15.0
+46 silly fetch manifest socket.io@^4.5.4
+47 http fetch GET 200 https://registry.npmjs.org/gridstack 87ms (cache hit)
+48 http fetch GET 200 https://registry.npmjs.org/compression 97ms (cache hit)
+49 http fetch GET 200 https://registry.npmjs.org/serve-static 99ms (cache hit)
+50 http fetch GET 200 https://registry.npmjs.org/socket.io 102ms (cache hit)
+51 timing idealTree:#root Completed in 196ms
+52 silly placeDep ROOT compression@1.7.4 OK for: node-red-dashboard@3.5.0 want: ^1.7.4
+53 silly placeDep ROOT gridstack@0.6.4 OK for: node-red-dashboard@3.5.0 want: ^0.6.4
+54 silly placeDep ROOT serve-static@1.15.0 OK for: node-red-dashboard@3.5.0 want: ^1.15.0
+55 silly placeDep ROOT socket.io@4.6.2 OK for: node-red-dashboard@3.5.0 want: ^4.5.4
+56 silly fetch manifest accepts@~1.3.5
+57 silly fetch manifest bytes@3.0.0
+58 silly fetch manifest compressible@~2.0.16
+59 silly fetch manifest debug@2.6.9
+60 silly fetch manifest on-headers@~1.0.2
+61 silly fetch manifest safe-buffer@5.1.2
+62 silly fetch manifest vary@~1.1.2
+63 silly fetch manifest jquery@^1.8 || 2 || 3
+64 silly fetch manifest encodeurl@~1.0.2
+65 silly fetch manifest escape-html@~1.0.3
+66 silly fetch manifest parseurl@~1.3.3
+67 silly fetch manifest send@0.18.0
+68 silly fetch manifest accepts@~1.3.4
+69 silly fetch manifest base64id@~2.0.0
+70 silly fetch manifest debug@~4.3.2
+71 silly fetch manifest engine.io@~6.4.2
+72 silly fetch manifest socket.io-adapter@~2.5.2
+73 silly fetch manifest socket.io-parser@~4.2.4
+74 http fetch GET 200 https://registry.npmjs.org/escape-html 371ms (cache hit)
+75 http fetch GET 200 https://registry.npmjs.org/jquery 382ms (cache hit)
+76 http fetch GET 200 https://registry.npmjs.org/debug 395ms (cache hit)
+77 http fetch GET 200 https://registry.npmjs.org/accepts 382ms (cache hit)
+78 http fetch GET 200 https://registry.npmjs.org/compressible 401ms (cache hit)
+79 http fetch GET 200 https://registry.npmjs.org/on-headers 400ms (cache hit)
+80 http fetch GET 200 https://registry.npmjs.org/accepts 412ms (cache hit)
+81 http fetch GET 200 https://registry.npmjs.org/bytes 408ms (cache hit)
+82 http fetch GET 200 https://registry.npmjs.org/safe-buffer 403ms (cache hit)
+83 http fetch GET 200 https://registry.npmjs.org/parseurl 398ms (cache hit)
+84 http fetch GET 200 https://registry.npmjs.org/vary 405ms (cache hit)
+85 http fetch GET 200 https://registry.npmjs.org/send 403ms (cache hit)
+86 http fetch GET 200 https://registry.npmjs.org/debug 401ms (cache hit)
+87 http fetch GET 200 https://registry.npmjs.org/encodeurl 414ms (cache hit)
+88 http fetch GET 200 https://registry.npmjs.org/socket.io-adapter 403ms (cache hit)
+89 http fetch GET 200 https://registry.npmjs.org/base64id 410ms (cache hit)
+90 http fetch GET 200 https://registry.npmjs.org/socket.io-parser 407ms (cache hit)
+91 http fetch GET 200 https://registry.npmjs.org/engine.io 411ms (cache hit)
+92 timing idealTree:node_modules/node-red-dashboard Completed in 454ms
+93 silly placeDep ROOT accepts@1.3.8 OK for: compression@1.7.4 want: ~1.3.5
+94 silly placeDep ROOT bytes@3.0.0 OK for: compression@1.7.4 want: 3.0.0
+95 silly placeDep ROOT compressible@2.0.18 OK for: compression@1.7.4 want: ~2.0.16
+96 silly placeDep ROOT debug@2.6.9 OK for: compression@1.7.4 want: 2.6.9
+97 silly placeDep ROOT on-headers@1.0.2 OK for: compression@1.7.4 want: ~1.0.2
+98 silly placeDep ROOT safe-buffer@5.1.2 OK for: compression@1.7.4 want: 5.1.2
+99 silly placeDep ROOT vary@1.1.2 OK for: compression@1.7.4 want: ~1.1.2
+100 silly fetch manifest mime-types@~2.1.34
+101 silly fetch manifest negotiator@0.6.3
+102 silly fetch manifest mime-db@>= 1.43.0 < 2
+103 silly fetch manifest ms@2.0.0
+104 http fetch GET 200 https://registry.npmjs.org/negotiator 69ms (cache hit)
+105 http fetch GET 200 https://registry.npmjs.org/mime-types 73ms (cache hit)
+106 http fetch GET 200 https://registry.npmjs.org/ms 72ms (cache hit)
+107 http fetch GET 200 https://registry.npmjs.org/mime-db 75ms (cache hit)
+108 timing idealTree:node_modules/compression Completed in 102ms
+109 silly placeDep ROOT mime-types@2.1.35 OK for: accepts@1.3.8 want: ~2.1.34
+110 silly placeDep ROOT negotiator@0.6.3 OK for: accepts@1.3.8 want: 0.6.3
+111 silly fetch manifest mime-db@1.52.0
+112 timing idealTree:node_modules/accepts Completed in 4ms
+113 timing idealTree:node_modules/bytes Completed in 0ms
+114 silly placeDep ROOT mime-db@1.52.0 OK for: compressible@2.0.18 want: >= 1.43.0 < 2
+115 timing idealTree:node_modules/compressible Completed in 2ms
+116 silly placeDep ROOT ms@2.0.0 OK for: debug@2.6.9 want: 2.0.0
+117 timing idealTree:node_modules/debug Completed in 1ms
+118 silly placeDep ROOT jquery@3.7.0 OK for: gridstack@0.6.4 want: ^1.8 || 2 || 3
+119 timing idealTree:node_modules/gridstack Completed in 2ms
+120 timing idealTree:node_modules/jquery Completed in 0ms
+121 timing idealTree:node_modules/mime-db Completed in 0ms
+122 timing idealTree:node_modules/mime-types Completed in 0ms
+123 timing idealTree:node_modules/ms Completed in 0ms
+124 timing idealTree:node_modules/negotiator Completed in 0ms
+125 timing idealTree:node_modules/on-headers Completed in 0ms
+126 timing idealTree:node_modules/safe-buffer Completed in 0ms
+127 silly placeDep ROOT encodeurl@1.0.2 OK for: serve-static@1.15.0 want: ~1.0.2
+128 silly placeDep ROOT escape-html@1.0.3 OK for: serve-static@1.15.0 want: ~1.0.3
+129 silly placeDep ROOT parseurl@1.3.3 OK for: serve-static@1.15.0 want: ~1.3.3
+130 silly placeDep ROOT send@0.18.0 OK for: serve-static@1.15.0 want: 0.18.0
+131 silly fetch manifest depd@2.0.0
+132 silly fetch manifest destroy@1.2.0
+133 silly fetch manifest etag@~1.8.1
+134 silly fetch manifest fresh@0.5.2
+135 silly fetch manifest http-errors@2.0.0
+136 silly fetch manifest mime@1.6.0
+137 silly fetch manifest ms@2.1.3
+138 silly fetch manifest on-finished@2.4.1
+139 silly fetch manifest range-parser@~1.2.1
+140 silly fetch manifest statuses@2.0.1
+141 http fetch GET 200 https://registry.npmjs.org/mime 151ms (cache hit)
+142 http fetch GET 200 https://registry.npmjs.org/http-errors 155ms (cache hit)
+143 http fetch GET 200 https://registry.npmjs.org/etag 160ms (cache hit)
+144 http fetch GET 200 https://registry.npmjs.org/statuses 154ms (cache hit)
+145 http fetch GET 200 https://registry.npmjs.org/on-finished 157ms (cache hit)
+146 http fetch GET 200 https://registry.npmjs.org/destroy 166ms (cache hit)
+147 http fetch GET 200 https://registry.npmjs.org/range-parser 160ms (cache hit)
+148 http fetch GET 200 https://registry.npmjs.org/fresh 167ms (cache hit)
+149 http fetch GET 200 https://registry.npmjs.org/depd 173ms (cache hit)
+150 timing idealTree:node_modules/serve-static Completed in 181ms
+151 timing idealTree:node_modules/encodeurl Completed in 0ms
+152 timing idealTree:node_modules/escape-html Completed in 0ms
+153 timing idealTree:node_modules/parseurl Completed in 0ms
+154 silly placeDep ROOT depd@2.0.0 OK for: send@0.18.0 want: 2.0.0
+155 silly placeDep ROOT destroy@1.2.0 OK for: send@0.18.0 want: 1.2.0
+156 silly placeDep ROOT etag@1.8.1 OK for: send@0.18.0 want: ~1.8.1
+157 silly placeDep ROOT fresh@0.5.2 OK for: send@0.18.0 want: 0.5.2
+158 silly placeDep ROOT http-errors@2.0.0 OK for: send@0.18.0 want: 2.0.0
+159 silly placeDep ROOT mime@1.6.0 OK for: send@0.18.0 want: 1.6.0
+160 silly placeDep node_modules/send ms@2.1.3 OK for: send@0.18.0 want: 2.1.3
+161 silly placeDep ROOT on-finished@2.4.1 OK for: send@0.18.0 want: 2.4.1
+162 silly placeDep ROOT range-parser@1.2.1 OK for: send@0.18.0 want: ~1.2.1
+163 silly placeDep ROOT statuses@2.0.1 OK for: send@0.18.0 want: 2.0.1
+164 silly fetch manifest inherits@2.0.4
+165 silly fetch manifest setprototypeof@1.2.0
+166 silly fetch manifest toidentifier@1.0.1
+167 silly fetch manifest ee-first@1.1.1
+168 http fetch GET 200 https://registry.npmjs.org/toidentifier 61ms (cache hit)
+169 http fetch GET 200 https://registry.npmjs.org/setprototypeof 65ms (cache hit)
+170 http fetch GET 200 https://registry.npmjs.org/inherits 70ms (cache hit)
+171 http fetch GET 200 https://registry.npmjs.org/ee-first 69ms (cache hit)
+172 timing idealTree:node_modules/send Completed in 96ms
+173 timing idealTree:node_modules/depd Completed in 0ms
+174 timing idealTree:node_modules/destroy Completed in 0ms
+175 timing idealTree:node_modules/etag Completed in 0ms
+176 timing idealTree:node_modules/fresh Completed in 0ms
+177 silly placeDep ROOT inherits@2.0.4 OK for: http-errors@2.0.0 want: 2.0.4
+178 silly placeDep ROOT setprototypeof@1.2.0 OK for: http-errors@2.0.0 want: 1.2.0
+179 silly placeDep ROOT toidentifier@1.0.1 OK for: http-errors@2.0.0 want: 1.0.1
+180 timing idealTree:node_modules/http-errors Completed in 4ms
+181 timing idealTree:node_modules/inherits Completed in 0ms
+182 timing idealTree:node_modules/mime Completed in 0ms
+183 silly placeDep ROOT ee-first@1.1.1 OK for: on-finished@2.4.1 want: 1.1.1
+184 timing idealTree:node_modules/on-finished Completed in 1ms
+185 timing idealTree:node_modules/ee-first Completed in 0ms
+186 timing idealTree:node_modules/range-parser Completed in 0ms
+187 timing idealTree:node_modules/setprototypeof Completed in 1ms
+188 silly placeDep ROOT base64id@2.0.0 OK for: socket.io@4.6.2 want: ~2.0.0
+189 silly placeDep node_modules/socket.io debug@4.3.4 OK for: socket.io@4.6.2 want: ~4.3.2
+190 silly placeDep ROOT engine.io@6.4.2 OK for: socket.io@4.6.2 want: ~6.4.2
+191 silly placeDep ROOT socket.io-adapter@2.5.2 OK for: socket.io@4.6.2 want: ~2.5.2
+192 silly placeDep ROOT socket.io-parser@4.2.4 OK for: socket.io@4.6.2 want: ~4.2.4
+193 silly fetch manifest ms@2.1.2
+194 silly fetch manifest @types/cookie@^0.4.1
+195 silly fetch manifest @types/cors@^2.8.12
+196 silly fetch manifest @types/node@>=10.0.0
+197 silly fetch manifest cookie@~0.4.1
+198 silly fetch manifest cors@~2.8.5
+199 silly fetch manifest debug@~4.3.1
+200 silly fetch manifest engine.io-parser@~5.0.3
+201 silly fetch manifest ws@~8.11.0
+202 silly fetch manifest @socket.io/component-emitter@~3.1.0
+203 http fetch GET 200 https://registry.npmjs.org/@types%2fcookie 123ms (cache hit)
+204 http fetch GET 200 https://registry.npmjs.org/@types%2fcors 127ms (cache hit)
+205 http fetch GET 200 https://registry.npmjs.org/cors 126ms (cache hit)
+206 http fetch GET 200 https://registry.npmjs.org/@types%2fnode 134ms (cache hit)
+207 http fetch GET 200 https://registry.npmjs.org/cookie 142ms (cache hit)
+208 http fetch GET 200 https://registry.npmjs.org/@socket.io%2fcomponent-emitter 137ms (cache hit)
+209 http fetch GET 200 https://registry.npmjs.org/engine.io-parser 142ms (cache hit)
+210 http fetch GET 200 https://registry.npmjs.org/ws 144ms (cache hit)
+211 timing idealTree:node_modules/socket.io Completed in 168ms
+212 timing idealTree:node_modules/base64id Completed in 0ms
+213 silly fetch manifest bufferutil@^4.0.1
+214 http fetch GET 200 https://registry.npmjs.org/bufferutil 92ms (cache hit)
+215 silly fetch manifest utf-8-validate@^5.0.2
+216 http fetch GET 200 https://registry.npmjs.org/utf-8-validate 106ms (cache hit)
+217 silly placeDep ROOT @types/cookie@0.4.1 OK for: engine.io@6.4.2 want: ^0.4.1
+218 silly placeDep ROOT @types/cors@2.8.13 OK for: engine.io@6.4.2 want: ^2.8.12
+219 silly placeDep ROOT @types/node@20.3.1 OK for: engine.io@6.4.2 want: >=10.0.0
+220 silly placeDep ROOT cookie@0.4.2 OK for: engine.io@6.4.2 want: ~0.4.1
+221 silly placeDep ROOT cors@2.8.5 OK for: engine.io@6.4.2 want: ~2.8.5
+222 silly placeDep node_modules/engine.io debug@4.3.4 OK for: engine.io@6.4.2 want: ~4.3.1
+223 silly placeDep ROOT engine.io-parser@5.0.7 OK for: engine.io@6.4.2 want: ~5.0.3
+224 silly placeDep ROOT ws@8.11.0 OK for: engine.io@6.4.2 want: ~8.11.0
+225 silly fetch manifest object-assign@^4
+226 http fetch GET 200 https://registry.npmjs.org/object-assign 84ms (cache hit)
+227 timing idealTree:node_modules/engine.io Completed in 313ms
+228 timing idealTree:node_modules/@types/cookie Completed in 0ms
+229 timing idealTree:node_modules/@types/cors Completed in 0ms
+230 timing idealTree:node_modules/@types/node Completed in 0ms
+231 timing idealTree:node_modules/cookie Completed in 0ms
+232 silly placeDep ROOT object-assign@4.1.1 OK for: cors@2.8.5 want: ^4
+233 timing idealTree:node_modules/cors Completed in 2ms
+234 timing idealTree:node_modules/engine.io-parser Completed in 0ms
+235 timing idealTree:node_modules/object-assign Completed in 0ms
+236 timing idealTree:node_modules/socket.io-adapter Completed in 0ms
+237 silly placeDep ROOT @socket.io/component-emitter@3.1.0 OK for: socket.io-parser@4.2.4 want: ~3.1.0
+238 silly placeDep node_modules/socket.io-parser debug@4.3.4 OK for: socket.io-parser@4.2.4 want: ~4.3.1
+239 timing idealTree:node_modules/socket.io-parser Completed in 5ms
+240 timing idealTree:node_modules/@socket.io/component-emitter Completed in 0ms
+241 timing idealTree:node_modules/statuses Completed in 0ms
+242 timing idealTree:node_modules/toidentifier Completed in 0ms
+243 timing idealTree:node_modules/vary Completed in 0ms
+244 timing idealTree:node_modules/ws Completed in 0ms
+245 silly placeDep node_modules/engine.io ms@2.1.2 OK for: debug@4.3.4 want: 2.1.2
+246 timing idealTree:node_modules/engine.io/node_modules/debug Completed in 6ms
+247 timing idealTree:node_modules/engine.io/node_modules/ms Completed in 0ms
+248 timing idealTree:node_modules/send/node_modules/ms Completed in 0ms
+249 silly placeDep node_modules/socket.io-parser ms@2.1.2 OK for: debug@4.3.4 want: 2.1.2
+250 timing idealTree:node_modules/socket.io-parser/node_modules/debug Completed in 3ms
+251 timing idealTree:node_modules/socket.io-parser/node_modules/ms Completed in 0ms
+252 silly placeDep node_modules/socket.io ms@2.1.2 OK for: debug@4.3.4 want: 2.1.2
+253 timing idealTree:node_modules/socket.io/node_modules/debug Completed in 2ms
+254 timing idealTree:node_modules/socket.io/node_modules/ms Completed in 0ms
+255 timing idealTree:buildDeps Completed in 1572ms
+256 timing idealTree:fixDepFlags Completed in 1ms
+257 timing idealTree Completed in 1610ms
+258 timing reify:loadTrees Completed in 1611ms
+259 timing reify:diffTrees Completed in 2ms
+260 silly reify moves {}
+261 timing reify:retireShallow Completed in 3ms
+262 timing reify:createSparse Completed in 117ms
+263 timing reify:trashOmits Completed in 0ms
+264 timing reify:loadBundles Completed in 0ms
+265 timing reifyNode:node_modules/object-assign Completed in 1050ms
+266 timing reifyNode:node_modules/@types/cookie Completed in 1068ms
+267 timing reifyNode:node_modules/ee-first Completed in 1075ms
+268 timing reifyNode:node_modules/destroy Completed in 1078ms
+269 timing reifyNode:node_modules/@types/cors Completed in 1083ms
+270 timing reifyNode:node_modules/ms Completed in 1084ms
+271 timing reifyNode:node_modules/escape-html Completed in 1086ms
+272 timing reifyNode:node_modules/engine.io/node_modules/ms Completed in 1097ms
+273 timing reifyNode:node_modules/socket.io-parser/node_modules/ms Completed in 1103ms
+274 timing reifyNode:node_modules/socket.io/node_modules/ms Completed in 1105ms
+275 timing reifyNode:node_modules/toidentifier Completed in 1109ms
+276 timing reifyNode:node_modules/inherits Completed in 1111ms
+277 timing reifyNode:node_modules/send/node_modules/ms Completed in 1112ms
+278 timing reifyNode:node_modules/range-parser Completed in 1114ms
+279 timing reifyNode:node_modules/http-errors Completed in 1124ms
+280 timing reifyNode:node_modules/fresh Completed in 1138ms
+281 timing reifyNode:node_modules/etag Completed in 1139ms
+282 timing reifyNode:node_modules/encodeurl Completed in 1141ms
+283 timing reifyNode:node_modules/parseurl Completed in 1142ms
+284 timing reifyNode:node_modules/accepts Completed in 1144ms
+285 timing reifyNode:node_modules/vary Completed in 1150ms
+286 timing reifyNode:node_modules/bytes Completed in 1151ms
+287 timing reifyNode:node_modules/compressible Completed in 1152ms
+288 timing reifyNode:node_modules/compression Completed in 1153ms
+289 timing reifyNode:node_modules/on-headers Completed in 1161ms
+290 timing reifyNode:node_modules/cookie Completed in 1165ms
+291 timing reifyNode:node_modules/base64id Completed in 1175ms
+292 timing reifyNode:node_modules/on-finished Completed in 1176ms
+293 timing reifyNode:node_modules/@socket.io/component-emitter Completed in 1211ms
+294 timing reifyNode:node_modules/setprototypeof Completed in 1219ms
+295 timing reifyNode:node_modules/statuses Completed in 1226ms
+296 timing reifyNode:node_modules/mime-types Completed in 1230ms
+297 timing reifyNode:node_modules/safe-buffer Completed in 1232ms
+298 timing reifyNode:node_modules/serve-static Completed in 1239ms
+299 timing reifyNode:node_modules/socket.io-adapter Completed in 1295ms
+300 timing reifyNode:node_modules/cors Completed in 1298ms
+301 timing reifyNode:node_modules/engine.io/node_modules/debug Completed in 1312ms
+302 timing reifyNode:node_modules/socket.io-parser/node_modules/debug Completed in 1328ms
+303 timing reifyNode:node_modules/socket.io/node_modules/debug Completed in 1330ms
+304 timing reifyNode:node_modules/depd Completed in 1350ms
+305 timing reifyNode:node_modules/send Completed in 1428ms
+306 timing reifyNode:node_modules/negotiator Completed in 1454ms
+307 timing reifyNode:node_modules/mime Completed in 1491ms
+308 timing reifyNode:node_modules/mime-db Completed in 1541ms
+309 timing reifyNode:node_modules/debug Completed in 1630ms
+310 timing reifyNode:node_modules/ws Completed in 1730ms
+311 timing reifyNode:node_modules/socket.io-parser Completed in 1802ms
+312 timing reifyNode:node_modules/engine.io-parser Completed in 1939ms
+313 timing reifyNode:node_modules/engine.io Completed in 1968ms
+314 timing reifyNode:node_modules/gridstack Completed in 2291ms
+315 timing reifyNode:node_modules/socket.io Completed in 2512ms
+316 timing reifyNode:node_modules/jquery Completed in 3756ms
+317 timing reifyNode:node_modules/node-red-dashboard Completed in 4478ms
+318 timing reifyNode:node_modules/@types/node Completed in 4542ms
+319 timing reify:unpack Completed in 4544ms
+320 timing reify:unretire Completed in 0ms
+321 timing build:queue Completed in 204ms
+322 timing build:link:node_modules/mime Completed in 23ms
+323 timing build:link Completed in 24ms
+324 timing build:deps Completed in 229ms
+325 timing build Completed in 230ms
+326 timing reify:build Completed in 231ms
+327 timing reify:trash Completed in 0ms
+328 timing command:install Completed in 6563ms
+329 verbose stack Error: EACCES: permission denied, open '/data/package.json'
+330 verbose cwd /data
+331 verbose Linux 5.10.16.3-microsoft-standard-WSL2
+332 verbose node v16.20.0
+333 verbose npm  v8.19.4
+334 error code EACCES
+335 error syscall open
+336 error path /data/package.json
+337 error errno -13
+338 error [Error: EACCES: permission denied, open '/data/package.json'] {
+338 error   errno: -13,
+338 error   code: 'EACCES',
+338 error   syscall: 'open',
+338 error   path: '/data/package.json'
+338 error }
+339 error
+339 error The operation was rejected by your operating system.
+339 error It is likely you do not have the permissions to access this file as the current user
+339 error
+339 error If you believe this might be a permissions issue, please double-check the
+339 error permissions of the file and its containing directories, or try running
+339 error the command again as root/Administrator.
+340 verbose exit -13
+341 timing npm Completed in 6776ms
+342 verbose unfinished npm timer reify 1687163492120
+343 verbose unfinished npm timer reify:save 1687163498645
+344 verbose code -13
+345 error A complete log of this run can be found in:
+345 error     /data/.npm/_logs/2023-06-19T08_31_31_917Z-debug-0.log

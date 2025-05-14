@@ -1,0 +1,185 @@
+version: "3"
+services:
+
+  # nodered con flow per web interface con servizi REST e MQTT
+  nodered:
+    container_name: node-red
+    hostname: 9bf2e3abb6c3
+    image: nodered/node-red
+    user: node-red
+    environment:
+      - PATH=/usr/src/node-red/node_modules/.bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+      - NODE_VERSION=16.16.0
+      - YARN_VERSION=1.22.19
+      - NODE_RED_VERSION=v3.0.2
+      - NODE_PATH=/usr/src/node-red/node_modules:/data/node_modules
+      - FLOWS=flow.json
+    volumes:
+      - ./Configuration\NodeRed\NodeRedVolume:/data
+    working_dir: /usr/src/node-red
+    ports:
+      - 1880:1880
+    restart: no
+    labels:
+      - 'authors=Dave Conway-Jones, Nick O Leary, James Thomas, Raymond Mouthaan'
+      - 'org.label-schema.arch='
+      - 'org.label-schema.build-date=2022-08-04T13:19:23Z'
+      - 'org.label-schema.description=Low-code programming for event-driven applications.'
+      - 'org.label-schema.docker.dockerfile=.docker/Dockerfile.alpine'
+      - 'org.label-schema.license=Apache-2.0'
+      - 'org.label-schema.name=Node-RED'
+      - 'org.label-schema.url=https://nodered.org'
+      - 'org.label-schema.vcs-ref='
+      - 'org.label-schema.vcs-type=Git'
+      - 'org.label-schema.vcs-url=https://github.com/node-red/node-red-docker'
+      - 'org.label-schema.version=3.0.2'
+    runtime: runc
+    tty: true
+    command: bash -c ".\Configuration\NodeRed\node-red-dashboard.sh && npm start -- --userDir /data"
+
+  #influxDB per memorizzare i dati
+  influxdb:
+    container_name: influxdb
+    hostname: 812a3a0bbd6e
+    image: influxdb:latest
+    environment:
+      - PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+      - GOSU_VER=1.12
+      - INFLUXDB_VERSION=2.7.0
+      - INFLUX_CLI_VERSION=2.7.1
+      - INFLUX_CONFIGS_PATH=/etc/influxdb2/influx-configs
+      - INFLUXD_INIT_PORT=9999
+      - INFLUXD_INIT_PING_ATTEMPTS=600
+      - DOCKER_INFLUXDB_INIT_CLI_CONFIG_NAME=default
+    ports:
+      - '8086:8086'
+    volumes:
+      - influxdb-config:/etc/influxdb2
+      - influxdb-data:/var/lib/influxdb2
+      - influxdb-wal:/var/lib/influxdb2/wal
+    restart: no
+    runtime: runc
+
+  # mosquitto come broker MQTT
+  mosquitto:
+    container_name: mosquitto
+    image: 'eclipse-mosquitto'
+    ports:
+      - '1883:1883'
+    volumes:
+    - .\Configuration:/mosquitto/config/Mosquitto
+    - mosquitto-log:/mosquitto/log/
+    - mosquitto-data:/mosquitto/data/
+
+  # webinterface con servizi REST
+  webinterface_rest:
+    build: .\Configuration\web-interface-rest\SpringBootInfluxDB
+    container_name: web-interface-rest
+    image: web-interface-rest:0.1
+    depends_on:
+      - influxdb
+      - nodered
+    ports:
+      - '8080:8080'
+
+  # webinterface con MQTT (producer + consumer)
+  webinterface_mqttproducer:
+    build: .\Configuration\web-interface-mqttproducer
+    container_name: web-interface-mqttproducer
+    image: web-interface-mqttproducer:0.1
+    depends_on:
+      - influxdb
+      - nodered
+      - mosquitto
+    ports:
+      - '8088:8088'
+
+  webinterface_mqttconsumer:
+    build: .\Configuration\web-interface-mqttconsumer
+    container_name: web-interface-mqttconsumer
+    image: web-interface_mqttconsumer:0.1
+    depends_on:
+      - influxdb
+      - nodered
+      - webinterface_mqttproducer
+      - mosquitto
+    ports:
+      - '8089:8089'
+
+  # zookeper, kafka e telegraf
+  zookeeper:
+    container_name: zookeeper
+    image: 'wurstmeister/zookeeper:latest'
+    ports:
+      - '2181:2181'
+    environment:
+      - ALLOW_ANONYMOUS_LOGIN=yes
+
+  kafka:
+    container_name: kafka
+    image: 'wurstmeister/kafka:latest'
+    ports:
+      - '9092:9092'
+    environment:
+      - KAFKA_BROKER_ID=1
+      - KAFKA_LISTENERS=PLAINTEXT://:9092
+      - KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://kafka:9092
+      - KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181
+      - ALLOW_PLAINTEXT_LISTENER=yes
+    depends_on:
+      - zookeeper
+
+  telegraf:
+    container_name: telegraf
+    image: 'telegraf'
+    volumes:
+    - .\Configuration\Telegraf:/etc/telegraf
+    depends_on:
+      - influxdb
+      - mosquitto
+      - kafka
+
+  # Plusoximeter con MQTT
+  plusoximeter_mqttproducer:
+    build: .\Configuration\plusoximeter-mqttproducer
+    container_name: plusoximeter_mqttproducer
+    image: plusoximeter_mqttproducer:0.1
+    depends_on:
+      - influxdb
+      - nodered
+    ports:
+      - '8090:8090'
+
+  plusoximeter_mqttconsumer:
+    build: .\Configuration\plusoximeter-mqttconsumer
+    container_name: plusoximeter_mqttconsumer
+    image: plusoximeter_mqttconsumer:0.1
+    depends_on:
+      - influxdb
+      - nodered
+      - plusoximeter_mqttproducer
+    ports:
+      - '8091:8091'
+
+  grafana:
+    container_name: grafana
+    ports:
+      - 3000:3000
+    volumes:
+      - .\Configuration\Grafana\grafana.ini:/etc/grafana/grafana.ini
+      - .\Configuration\Grafana\GrafanaVolume:/var/lib/grafana
+    image: grafana/grafana:8.5.2
+
+
+volumes:
+    mosquitto-log:
+      external: false
+    mosquitto-data:
+      external: false
+    influxdb-config:
+    influxdb-data:
+    influxdb-wal:
+
+networks:
+  mynet:
+    external: true

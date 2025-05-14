@@ -1,0 +1,91 @@
+0 verbose cli /usr/local/bin/node /usr/local/bin/npm
+1 info using npm@8.19.4
+2 info using node@v16.20.0
+3 timing npm:load:whichnode Completed in 1ms
+4 timing config:load:defaults Completed in 2ms
+5 timing config:load:file:/usr/local/lib/node_modules/npm/npmrc Completed in 1ms
+6 timing config:load:builtin Completed in 1ms
+7 warn config production Use `--omit=dev` instead.
+8 timing config:load:cli Completed in 4ms
+9 timing config:load:env Completed in 0ms
+10 timing config:load:file:/data/.npmrc Completed in 1ms
+11 timing config:load:project Completed in 13ms
+12 timing config:load:file:/usr/src/node-red/.npmrc Completed in 0ms
+13 timing config:load:user Completed in 0ms
+14 timing config:load:file:/usr/local/etc/npmrc Completed in 2ms
+15 timing config:load:global Completed in 2ms
+16 timing config:load:validate Completed in 0ms
+17 timing config:load:credentials Completed in 3ms
+18 timing config:load:setEnvs Completed in 3ms
+19 timing config:load Completed in 30ms
+20 timing npm:load:configload Completed in 30ms
+21 timing npm:load:mkdirpcache Completed in 5ms
+22 timing npm:load:mkdirplogs Completed in 5ms
+23 verbose title npm install node-red-dashboard@3.5.0
+24 verbose argv "install" "--no-audit" "--no-update-notifier" "--no-fund" "--save" "--save-prefix" "~" "--production" "--engine-strict" "node-red-dashboard@3.5.0"
+25 timing npm:load:setTitle Completed in 2ms
+26 timing config:load:flatten Completed in 4ms
+27 timing npm:load:display Completed in 7ms
+28 verbose logfile logs-max:10 dir:/data/.npm/_logs
+29 verbose logfile /data/.npm/_logs/2023-06-19T08_32_01_836Z-debug-0.log
+30 timing npm:load:logFile Completed in 22ms
+31 timing npm:load:timers Completed in 0ms
+32 timing npm:load:configScope Completed in 0ms
+33 timing npm:load Completed in 76ms
+34 timing arborist:ctor Completed in 2ms
+35 silly logfile done cleaning log files
+36 timing idealTree:init Completed in 70ms
+37 timing idealTree:userRequests Completed in 4ms
+38 silly idealTree buildDeps
+39 silly fetch manifest node-red-dashboard@3.5.0
+40 http fetch GET 200 https://registry.npmjs.org/node-red-dashboard 237ms (cache hit)
+41 silly placeDep ROOT node-red-dashboard@3.5.0 REPLACE for: node-red-project@0.0.1 want: 3.5.0
+42 timing idealTree:#root Completed in 252ms
+43 timing idealTree:node_modules/node-red-dashboard Completed in 0ms
+44 timing idealTree:buildDeps Completed in 255ms
+45 timing idealTree:fixDepFlags Completed in 2ms
+46 timing idealTree Completed in 335ms
+47 timing reify:loadTrees Completed in 336ms
+48 timing reify:diffTrees Completed in 7ms
+49 silly reify moves {}
+50 timing reify:retireShallow Completed in 1ms
+51 timing reify:createSparse Completed in 0ms
+52 timing reify:trashOmits Completed in 1ms
+53 timing reify:loadBundles Completed in 0ms
+54 timing reify:unpack Completed in 0ms
+55 timing reify:unretire Completed in 0ms
+56 timing build:queue Completed in 0ms
+57 timing build:deps Completed in 1ms
+58 timing build Completed in 1ms
+59 timing reify:build Completed in 3ms
+60 timing reify:trash Completed in 0ms
+61 timing command:install Completed in 386ms
+62 verbose stack Error: EACCES: permission denied, open '/data/package.json'
+63 verbose cwd /data
+64 verbose Linux 5.10.16.3-microsoft-standard-WSL2
+65 verbose node v16.20.0
+66 verbose npm  v8.19.4
+67 error code EACCES
+68 error syscall open
+69 error path /data/package.json
+70 error errno -13
+71 error [Error: EACCES: permission denied, open '/data/package.json'] {
+71 error   errno: -13,
+71 error   code: 'EACCES',
+71 error   syscall: 'open',
+71 error   path: '/data/package.json'
+71 error }
+72 error
+72 error The operation was rejected by your operating system.
+72 error It is likely you do not have the permissions to access this file as the current user
+72 error
+72 error If you believe this might be a permissions issue, please double-check the
+72 error permissions of the file and its containing directories, or try running
+72 error the command again as root/Administrator.
+73 verbose exit -13
+74 timing npm Completed in 579ms
+75 verbose unfinished npm timer reify 1687163522024
+76 verbose unfinished npm timer reify:save 1687163522384
+77 verbose code -13
+78 error A complete log of this run can be found in:
+78 error     /data/.npm/_logs/2023-06-19T08_32_01_836Z-debug-0.log

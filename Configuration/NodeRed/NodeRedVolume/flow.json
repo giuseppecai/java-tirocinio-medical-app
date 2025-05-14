@@ -1,0 +1,1302 @@
+[
+    {
+        "id": "f6f2187d.f17ca8",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "31ea6423abe3a8b1",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "1fd11efac44d3834",
+        "type": "ui_group",
+        "name": "Group 1",
+        "tab": "fe7b666aa2020e35",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "fe7b666aa2020e35",
+        "type": "ui_tab",
+        "name": "Tab 1",
+        "icon": "dashboard",
+        "order": 1
+    },
+    {
+        "id": "c206d78310b4d9c0",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "274d44c87d9464be",
+        "type": "ui_tab",
+        "name": "Tab 2",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "0fec67dcc823baf0",
+        "type": "ui_group",
+        "name": "Group 2",
+        "tab": "fe7b666aa2020e35",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "bbe1c6a0491634be",
+        "type": "ui_group",
+        "name": "Group 1",
+        "tab": "274d44c87d9464be",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "304d390a44aa04ec",
+        "type": "ui_group",
+        "name": "Group 2",
+        "tab": "274d44c87d9464be",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "3cc11d24.ff01a2",
+        "type": "comment",
+        "z": "f6f2187d.f17ca8",
+        "name": "WARNING: please check you have started this container with a volume that is mounted to /data\\n otherwise any flow changes are lost when you redeploy or upgrade the container\\n (e.g. upgrade to a more recent node-red docker image).\\n  If you are using named volumes you can ignore this warning.\\n Double click or see info side panel to learn how to start Node-RED in Docker to save your work",
+        "info": "\nTo start docker with a bind mount volume (-v option), for example:\n\n```\ndocker run -it -p 1880:1880 -v /home/user/node_red_data:/data --name mynodered nodered/node-red\n```\n\nwhere `/home/user/node_red_data` is a directory on your host machine where you want to store your flows.\n\nIf you do not do this then you can experiment and redploy flows, but if you restart or upgrade the container the flows will be disconnected and lost. \n\nThey will still exist in a hidden data volume, which can be recovered using standard docker techniques, but that is much more complex than just starting with a named volume as described above.",
+        "x": 350,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "a7fe207f67c95e23",
+        "type": "ui_numeric",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "label": "Scegli num persone web app",
+        "tooltip": "",
+        "group": "1fd11efac44d3834",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "wrap": true,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "className": "",
+        "x": 160,
+        "y": 220,
+        "wires": [
+            [
+                "b87e1054a15d781e"
+            ]
+        ]
+    },
+    {
+        "id": "bb0d5254ad9df3ee",
+        "type": "ui_button",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "group": "1fd11efac44d3834",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "start web app",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "start",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 140,
+        "y": 300,
+        "wires": [
+            [
+                "966e9bb3928606a2",
+                "d329d662af6188f1"
+            ]
+        ]
+    },
+    {
+        "id": "14312b4e674a9fec",
+        "type": "ui_text",
+        "z": "f6f2187d.f17ca8",
+        "group": "1fd11efac44d3834",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "N persone database web app",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 960,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "b87e1054a15d781e",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 1",
+        "func": "// Extract the chosen number from the payload\nvar chosenNumber = parseInt(msg.payload);\n\n// Save the chosen number as a flow variable\nflow.set('chosenNumber', chosenNumber);\n\n// Pass the original message to the next node in the flow\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d08ce056928ca5ec",
+        "type": "ui_numeric",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "label": "scegli persona Infarto web",
+        "tooltip": "",
+        "group": "0fec67dcc823baf0",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "wrap": true,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "9",
+        "step": 1,
+        "className": "",
+        "x": 150,
+        "y": 760,
+        "wires": [
+            [
+                "8ed9e7ee9c85e756"
+            ]
+        ]
+    },
+    {
+        "id": "8ed9e7ee9c85e756",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 3",
+        "func": "// Extract the chosen number from the payload\nvar chosenNumber = parseInt(msg.payload);\n\n// Save the chosen number as a flow variable\nflow.set('personaInfarto', chosenNumber);\n\n// Pass the original message to the next node in the flow\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "169fecbb91e22416",
+        "type": "ui_text",
+        "z": "f6f2187d.f17ca8",
+        "group": "0fec67dcc823baf0",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Persona web app",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 710,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "6297455f7028b009",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 4",
+        "func": "\n    var chosenNumber = flow.get('personaInfarto');\nflow.set(\"infartoUrl\", \"http://web-interface-rest:8080/infarto/\" + chosenNumber )\n    // Create a new message with the chosen number\n    msg.payload = chosenNumber;\n\n    // Send the message to the next node in the flow\n    return msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 820,
+        "wires": [
+            [
+                "169fecbb91e22416",
+                "0c5114ca31d259d5"
+            ]
+        ]
+    },
+    {
+        "id": "c4b939bc50249af1",
+        "type": "http request",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 790,
+        "y": 920,
+        "wires": [
+            [
+                "faf1b68ddf748596"
+            ]
+        ]
+    },
+    {
+        "id": "2fc48094a6cdec71",
+        "type": "http request",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1110,
+        "y": 300,
+        "wires": [
+            [
+                "5171ed79faa1b874"
+            ]
+        ]
+    },
+    {
+        "id": "c7e1463c15f352dd",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 5",
+        "func": "var chosenNumber = flow.get('chosenNumber');\nflow.set('startUrl', \"http://web-interface-rest:8080/start/\"+chosenNumber);\n// Create a new message with the chosen number\nmsg.payload = chosenNumber;\n\n// Send the message to the next node in the flow\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 740,
+        "y": 300,
+        "wires": [
+            [
+                "14312b4e674a9fec",
+                "d29aaf33e7e87846"
+            ]
+        ]
+    },
+    {
+        "id": "d329d662af6188f1",
+        "type": "trigger",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "op1": "running",
+        "op2": "0",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "0",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "reset",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 560,
+        "y": 300,
+        "wires": [
+            [
+                "c7e1463c15f352dd",
+                "e9583c4730e0d8f9"
+            ]
+        ]
+    },
+    {
+        "id": "9bd44a7604127c37",
+        "type": "ui_button",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "group": "1fd11efac44d3834",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "stop web app",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "reset",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 110,
+        "y": 460,
+        "wires": [
+            [
+                "ce3d224454ea5804",
+                "4a2e9370adfd160f",
+                "966e9bb3928606a2"
+            ]
+        ]
+    },
+    {
+        "id": "ce3d224454ea5804",
+        "type": "http request",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "query",
+        "url": "http://web-interface-rest:8080/stop",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 410,
+        "y": 520,
+        "wires": [
+            [
+                "571a4c0083563388"
+            ]
+        ]
+    },
+    {
+        "id": "e9583c4730e0d8f9",
+        "type": "ui_text",
+        "z": "f6f2187d.f17ca8",
+        "group": "1fd11efac44d3834",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Stato programma web app",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 1040,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "4a2e9370adfd160f",
+        "type": "delay",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "10",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 380,
+        "y": 360,
+        "wires": [
+            [
+                "d329d662af6188f1"
+            ]
+        ]
+    },
+    {
+        "id": "966e9bb3928606a2",
+        "type": "trigger",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "op1": "",
+        "op2": "stopped",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "0",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "start",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 420,
+        "y": 460,
+        "wires": [
+            [
+                "f20e990464910d1e"
+            ]
+        ]
+    },
+    {
+        "id": "f20e990464910d1e",
+        "type": "trigger",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "op1": "stopping...",
+        "op2": "stopped",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "10",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 690,
+        "y": 460,
+        "wires": [
+            [
+                "e9583c4730e0d8f9"
+            ]
+        ]
+    },
+    {
+        "id": "5171ed79faa1b874",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1320,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "d29aaf33e7e87846",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "url",
+                "pt": "msg",
+                "to": "startUrl",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 910,
+        "y": 360,
+        "wires": [
+            [
+                "2fc48094a6cdec71"
+            ]
+        ]
+    },
+    {
+        "id": "571a4c0083563388",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "0c5114ca31d259d5",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "url",
+                "pt": "msg",
+                "to": "infartoUrl",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 570,
+        "y": 880,
+        "wires": [
+            [
+                "c4b939bc50249af1"
+            ]
+        ]
+    },
+    {
+        "id": "9ad4b3830695fade",
+        "type": "ui_button",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "group": "0fec67dcc823baf0",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Start infarto web app",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 180,
+        "y": 820,
+        "wires": [
+            [
+                "6297455f7028b009"
+            ]
+        ]
+    },
+    {
+        "id": "faf1b68ddf748596",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "e1cbaca66c22c8da",
+        "type": "comment",
+        "z": "31ea6423abe3a8b1",
+        "name": "WARNING: please check you have started this container with a volume that is mounted to /data\\n otherwise any flow changes are lost when you redeploy or upgrade the container\\n (e.g. upgrade to a more recent node-red docker image).\\n  If you are using named volumes you can ignore this warning.\\n Double click or see info side panel to learn how to start Node-RED in Docker to save your work",
+        "info": "\nTo start docker with a bind mount volume (-v option), for example:\n\n```\ndocker run -it -p 1880:1880 -v /home/user/node_red_data:/data --name mynodered nodered/node-red\n```\n\nwhere `/home/user/node_red_data` is a directory on your host machine where you want to store your flows.\n\nIf you do not do this then you can experiment and redploy flows, but if you restart or upgrade the container the flows will be disconnected and lost. \n\nThey will still exist in a hidden data volume, which can be recovered using standard docker techniques, but that is much more complex than just starting with a named volume as described above.",
+        "x": 350,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "86516b26c74b5f71",
+        "type": "ui_numeric",
+        "z": "31ea6423abe3a8b1",
+        "name": "",
+        "label": "Scegli num persone MQTT",
+        "tooltip": "",
+        "group": "bbe1c6a0491634be",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "wrap": true,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "className": "",
+        "x": 160,
+        "y": 220,
+        "wires": [
+            [
+                "92c7983a696885a2"
+            ]
+        ]
+    },
+    {
+        "id": "b1cdd0c80209851d",
+        "type": "ui_button",
+        "z": "31ea6423abe3a8b1",
+        "name": "",
+        "group": "bbe1c6a0491634be",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "start MQTT app",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "start",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 140,
+        "y": 300,
+        "wires": [
+            [
+                "57bef1383a2f4fc6",
+                "a6898ec2c1eed7cb"
+            ]
+        ]
+    },
+    {
+        "id": "37ef73b4ce72f348",
+        "type": "ui_text",
+        "z": "31ea6423abe3a8b1",
+        "group": "bbe1c6a0491634be",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "N persone database MQTT",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 960,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "92c7983a696885a2",
+        "type": "function",
+        "z": "31ea6423abe3a8b1",
+        "name": "function 1",
+        "func": "// Extract the chosen number from the payload\nvar chosenNumber = parseInt(msg.payload);\n\n// Save the chosen number as a flow variable\nflow.set('chosenNumber', chosenNumber);\n\n// Pass the original message to the next node in the flow\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6370eb0d369ea7d2",
+        "type": "ui_numeric",
+        "z": "31ea6423abe3a8b1",
+        "name": "",
+        "label": "scegli persona Infarto MQTT",
+        "tooltip": "",
+        "group": "304d390a44aa04ec",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "wrap": true,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "9",
+        "step": 1,
+        "className": "",
+        "x": 160,
+        "y": 760,
+        "wires": [
+            [
+                "6391016809d1acae"
+            ]
+        ]
+    },
+    {
+        "id": "6391016809d1acae",
+        "type": "function",
+        "z": "31ea6423abe3a8b1",
+        "name": "function 3",
+        "func": "// Extract the chosen number from the payload\nvar chosenNumber = parseInt(msg.payload);\n\n// Save the chosen number as a flow variable\nflow.set('personaInfarto', chosenNumber);\n\n// Pass the original message to the next node in the flow\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "86c0a1e5e3c54e50",
+        "type": "ui_text",
+        "z": "31ea6423abe3a8b1",
+        "group": "304d390a44aa04ec",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Persona MQTT app",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 710,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "674a8544c3c45777",
+        "type": "function",
+        "z": "31ea6423abe3a8b1",
+        "name": "function 4",
+        "func": "\n    var chosenNumber = flow.get('personaInfarto');\nflow.set(\"infartoUrl\", \"http://web-interface-mqttproducer:8088/infarto/\" + chosenNumber )\n    // Create a new message with the chosen number\n    msg.payload = chosenNumber;\n\n    // Send the message to the next node in the flow\n    return msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 820,
+        "wires": [
+            [
+                "86c0a1e5e3c54e50",
+                "6f7fc04898a727fc"
+            ]
+        ]
+    },
+    {
+        "id": "f373e13b403342c8",
+        "type": "http request",
+        "z": "31ea6423abe3a8b1",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 790,
+        "y": 920,
+        "wires": [
+            [
+                "ba64428cd875860d"
+            ]
+        ]
+    },
+    {
+        "id": "42d31ed5c8fffb3b",
+        "type": "http request",
+        "z": "31ea6423abe3a8b1",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1110,
+        "y": 300,
+        "wires": [
+            [
+                "c579e9e4d2e1e705"
+            ]
+        ]
+    },
+    {
+        "id": "00d99d9585b83a9b",
+        "type": "function",
+        "z": "31ea6423abe3a8b1",
+        "name": "function 5",
+        "func": "var chosenNumber = flow.get('chosenNumber');\nflow.set('startUrl', \"http://web-interface-mqttproducer:8088/start/\"+chosenNumber);\n// Create a new message with the chosen number\nmsg.payload = chosenNumber;\n\n// Send the message to the next node in the flow\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 740,
+        "y": 300,
+        "wires": [
+            [
+                "37ef73b4ce72f348",
+                "b2fe4bd7889452a9"
+            ]
+        ]
+    },
+    {
+        "id": "a6898ec2c1eed7cb",
+        "type": "trigger",
+        "z": "31ea6423abe3a8b1",
+        "name": "",
+        "op1": "running",
+        "op2": "0",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "0",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "reset",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 560,
+        "y": 300,
+        "wires": [
+            [
+                "00d99d9585b83a9b",
+                "6d4054ac193a1e37"
+            ]
+        ]
+    },
+    {
+        "id": "8038a7a1563cc6a5",
+        "type": "ui_button",
+        "z": "31ea6423abe3a8b1",
+        "name": "",
+        "group": "bbe1c6a0491634be",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "stop MQTT app",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "reset",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 120,
+        "y": 460,
+        "wires": [
+            [
+                "caa172ba10e24361",
+                "eac552d41a1b4835",
+                "57bef1383a2f4fc6"
+            ]
+        ]
+    },
+    {
+        "id": "caa172ba10e24361",
+        "type": "http request",
+        "z": "31ea6423abe3a8b1",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "query",
+        "url": "http://web-interface-mqttproducer:8088/stop",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 410,
+        "y": 520,
+        "wires": [
+            [
+                "4a56af9fdd7241e9"
+            ]
+        ]
+    },
+    {
+        "id": "6d4054ac193a1e37",
+        "type": "ui_text",
+        "z": "31ea6423abe3a8b1",
+        "group": "bbe1c6a0491634be",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Stato programma MQTT",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 1030,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "eac552d41a1b4835",
+        "type": "delay",
+        "z": "31ea6423abe3a8b1",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "10",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 380,
+        "y": 360,
+        "wires": [
+            [
+                "a6898ec2c1eed7cb"
+            ]
+        ]
+    },
+    {
+        "id": "57bef1383a2f4fc6",
+        "type": "trigger",
+        "z": "31ea6423abe3a8b1",
+        "name": "",
+        "op1": "",
+        "op2": "stopped",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "0",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "start",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 420,
+        "y": 460,
+        "wires": [
+            [
+                "0a0d0e25f6a99365"
+            ]
+        ]
+    },
+    {
+        "id": "0a0d0e25f6a99365",
+        "type": "trigger",
+        "z": "31ea6423abe3a8b1",
+        "name": "",
+        "op1": "stopping...",
+        "op2": "stopped",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "10",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 690,
+        "y": 460,
+        "wires": [
+            [
+                "6d4054ac193a1e37"
+            ]
+        ]
+    },
+    {
+        "id": "c579e9e4d2e1e705",
+        "type": "debug",
+        "z": "31ea6423abe3a8b1",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1320,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "b2fe4bd7889452a9",
+        "type": "change",
+        "z": "31ea6423abe3a8b1",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "url",
+                "pt": "msg",
+                "to": "startUrl",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 910,
+        "y": 360,
+        "wires": [
+            [
+                "42d31ed5c8fffb3b"
+            ]
+        ]
+    },
+    {
+        "id": "4a56af9fdd7241e9",
+        "type": "debug",
+        "z": "31ea6423abe3a8b1",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "6f7fc04898a727fc",
+        "type": "change",
+        "z": "31ea6423abe3a8b1",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "url",
+                "pt": "msg",
+                "to": "infartoUrl",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 570,
+        "y": 880,
+        "wires": [
+            [
+                "f373e13b403342c8"
+            ]
+        ]
+    },
+    {
+        "id": "e854ef836408b95c",
+        "type": "ui_button",
+        "z": "31ea6423abe3a8b1",
+        "name": "",
+        "group": "304d390a44aa04ec",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Start infarto MQTT app",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 180,
+        "y": 820,
+        "wires": [
+            [
+                "674a8544c3c45777"
+            ]
+        ]
+    },
+    {
+        "id": "ba64428cd875860d",
+        "type": "debug",
+        "z": "31ea6423abe3a8b1",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 920,
+        "wires": []
+    }
+]
